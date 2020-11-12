@@ -1,0 +1,3 @@
+docker run -itd -p 7001:7001 -p 8453:8453 -v $(pwd)/properties:/u01/oracle/properties -e ADMINISTRATION_PORT_ENABLED=false -e DOMAIN_NAME=docker_domain oracle/weblogic:12.2.1.4
+docker cp fmw_12.2.1.4.0_wls_Disk1_1of1镜像环境/setDomainEnv.sh 0ebc9bbfb321:/u01/oracle/user_projects/domains/docker_domain/bin/setDomainEnv.sh
+docker container restart $(docker ps|grep "oracle/weblogic:12.2.1.4"|awk '{print $1}')

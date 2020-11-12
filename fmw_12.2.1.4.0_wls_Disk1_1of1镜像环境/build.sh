@@ -1,0 +1,1 @@
+docker build -f Dockerfile -t oracle/weblogic:12.2.1.4 .

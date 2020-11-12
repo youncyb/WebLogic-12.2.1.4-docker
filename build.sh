@@ -1,0 +1,1 @@
+cd server-jre8u101镜像 && docker build -t oracle/serverjre:8 . && cd ../fmw_12.2.1.4.0_wls_Disk1_1of1镜像环境 && docker build -f Dockerfile -t oracle/weblogic:12.2.1.4 .
